@@ -1,1 +1,32 @@
 @import '~bootstrap/dist/css/bootstrap.css';
+
+@media (min-width: 1200px) {
+  .u-block-dba7-2 {
+    min-height: 493px;
+  }
+  .u-block-dba7-24 {
+    width: 570px;
+    margin: 80px auto 0;
+  }
+  .u-block-dba7-27 {
+    background-image: none;
+  }
+  .u-block-dba7-30 {
+    background-image: none;
+  }
+  .u-block-dba7-34 {
+    width: 100%;
+    padding: 10px 30px;
+  }
+  .u-block-dba7-21 {
+    border-style: solid;
+    align-self: center;
+    margin: 30px auto 0 285px;
+    padding: 0;
+  }
+  .u-block-dba7-23 {
+    border-style: solid;
+    margin: -26px 285px -68px auto;
+    padding: 0;
+  }
+}

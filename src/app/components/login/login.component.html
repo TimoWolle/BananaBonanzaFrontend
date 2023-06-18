@@ -1,33 +1,35 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="text-center">Login</h2>
-          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input id="email" type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                <div *ngIf="f.email.errors.required">Email is required</div>
-                <div *ngIf="f.email.errors.email">Email is invalid</div>
-              </div>
+<body class="u-body u-xl-mode" data-lang="de">
+  <section class="u-clearfix u-section-1" id="sec-d819">
+    <div class="u-clearfix u-sheet u-block-dba7-2">
+      <div class="u-form u-login-control u-block-dba7-24">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="u-clearfix u-form-custom-backend u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;" data-services="">
+          <div class="u-form-group u-form-name u-block-dba7-25">
+            <label for="username-a30d" class="u-label u-block-dba7-26">Username *</label>
+            <input id="username-a30d" type="text" placeholder="Enter your Username" formControlName="email" class="u-grey-5 u-input u-input-rectangle u-block-dba7-27" required="" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" >
+            <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+              <div *ngIf="f['email'].errors['required']">Email is required</div>
+              <div *ngIf="f['email'].errors['email']">Email is invalid</div>
             </div>
-
-            <div class="form-group">
-              <label for="password">Password:</label>
-              <input id="password" type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                <div *ngIf="f.password.errors.required">Password is required</div>
-              </div>
+          </div>
+          <div class="u-form-group u-form-password u-block-dba7-28">
+            <label for="password-a30d" class="u-label u-block-dba7-29">Password *</label>
+            <input id="password-a30d" type="password" placeholder="Enter your Password" formControlName="password" class="u-grey-5 u-input u-input-rectangle u-block-dba7-30" required="" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
+            <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+              <div *ngIf="f['password'].errors['required']">Password is required</div>
             </div>
-
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-block" [disabled]="loginForm.invalid">Login</button>
-            </div>
-          </form>
-        </div>
+          </div>
+          <div class="u-form-checkbox u-form-group u-block-dba7-31">
+            <input type="checkbox" id="checkbox-a30d" name="remember" value="On" class="u-field-input">
+            <label for="checkbox-a30d" class="u-block-dba7-32 u-field-label" style="">Remember me</label>
+          </div>
+          <div class="u-align-left u-form-group u-form-submit u-block-dba7-33">
+            <button type="submit" class="u-btn u-btn-submit u-button-style u-block-dba7-34" [disabled]="loginForm.invalid">Login</button>
+          </div>
+          <input type="hidden" value="" name="recaptchaResponse">
+        </form>
       </div>
+      <a href="#" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-login-control u-login-forgot-password u-none u-text-palette-1-base u-block-dba7-21">Forgot password?</a>
+      <a href="#" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-login-control u-login-create-account u-none u-text-palette-1-base u-block-dba7-23">Don't have an account?</a>
     </div>
-  </div>
-</div>
+  </section>
+</body>

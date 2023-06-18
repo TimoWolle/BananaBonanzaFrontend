@@ -1,19 +1,55 @@
-<div class="container">
-  <div class="row">
-    <div *ngFor="let product of products" class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <img class="bd-placeholder-img card-img-top" width="100%" height="225" [src]="product.imageUrl" alt="{{product.name}}">
-        <div class="card-body">
-          <h2>{{product.name}}</h2>
-          <p class="card-text">{{product.description}}</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary" (click)="onSelectProduct(product)">View</button>
+<body class="u-body u-xl-mode" data-style="products-template-1" data-posts="" data-global-section-properties="{&quot;code&quot;:&quot;PRODUCTS&quot;,&quot;colorings&quot;:{&quot;light&quot;:[&quot;clean&quot;,&quot;clean&quot;],&quot;colored&quot;:[&quot;clean&quot;,&quot;clean&quot;,&quot;clean&quot;],&quot;dark&quot;:[&quot;clean&quot;,&quot;clean&quot;,&quot;clean&quot;]},&quot;isPreset&quot;:true}" data-source="fix" data-lang="de" data-page-sections-style="[{&quot;name&quot;:&quot;products-1&quot;,&quot;margin&quot;:&quot;both&quot;,&quot;repeat&quot;:false,&quot;repeater-items-count&quot;:6}]" data-page-coloring-types="{&quot;light&quot;:[&quot;clean&quot;,&quot;clean&quot;],&quot;colored&quot;:[&quot;clean&quot;,&quot;clean&quot;,&quot;clean&quot;],&quot;dark&quot;:[&quot;clean&quot;,&quot;clean&quot;,&quot;clean&quot;]}" data-page-category="&quot;Products&quot;"><section class="u-align-center u-clearfix u-grey-10 u-block-b1b6-1" custom-posts-hash="[[I,T],[I,T],[I,T],[I,T]]" data-post-id="2309252694;2309252694;2309252694;2309252694" data-section-properties="{&quot;stretch&quot;:true}" data-id="b1b6" data-posts-content="[{'images':[[275,287]],'maps':[],'videos':[],'icons':[],'textWidth':270,'textHeight':287,'id':1,'groupId':2,'headingProp':'h4','textProp':'text'},{'images':[[275,287]],'maps':[],'videos':[],'icons':[],'textWidth':270,'textHeight':287,'id':3,'groupId':2,'headingProp':'h4','textProp':'text'},{'images':[[275,287]],'maps':[],'videos':[],'icons':[],'textWidth':270,'textHeight':287,'id':4,'groupId':2,'headingProp':'h4','textProp':'text'},{'images':[[275,287]],'maps':[],'videos':[],'icons':[],'textWidth':270,'textHeight':287,'id':5,'groupId':2,'headingProp':'h4','textProp':'text'}]" data-style="products-16" id="sec-93e7" data-source="Sketch">
+  <div class="u-clearfix u-sheet u-block-b1b6-2">
+    <div class="u-expanded-width u-pagination-center u-products u-sorting-right u-block-b1b6-3" data-max-items="15">
+      <div class="has-sorting u-list-control">
+        <div class="u-sorting u-block-b1b6-125">
+          <select (change)="onSortChange($event)" name="sorting" class="u-input u-select-sorting u-block-b1b6-126">
+            <option value="recommend">Empfohlen</option>
+            <option value="price_asc">Preis: Aufsteigend</option>
+            <option value="price_desc">Preis: Absteigend</option>
+            <option value="rating">Durchschn. Kundenbewertung</option>
+          </select>
+          <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+        </div>
+      </div>
+
+      <div class="u-repeater u-block-b1b6-36">
+        <div *ngFor="let product of products" class="u-container-style u-products-item u-repeater-item u-white u-block-b1b6-4">
+          <div class="u-container-layout u-similar-container u-valign-bottom u-block-b1b6-5">
+            <img alt="" class="u-expanded-height u-image u-image-default u-product-control u-block-b1b6-6" [src]="product.imageURL">
+            <div class="u-align-center u-container-style u-group u-block-b1b6-7">
+              <div class="u-container-layout u-valign-middle u-block-b1b6-8">
+                <h4 class="u-product-control u-text u-block-b1b6-9">
+                  <a class="u-product-title-link" routerLink="'/product/'{{product.id}}">{{ product.title }}</a>
+                </h4>
+                <div class="u-product-control u-product-price u-block-b1b6-10">
+                  <div class="u-price-wrapper u-spacing-10">
+                    <div *ngIf="product.oldPrice" class="u-hide-price u-old-price">{{ product.oldPrice }}</div>
+                    <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;">{{ product.price }}</div>
+                  </div>
+                </div>
+                <a (click)="addToCart(product)" class="u-border-2 u-border-grey-25 u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-body-color u-block-b1b6-11">Add to Cart</a>
+              </div>
             </div>
-            <h4 class="text-muted">{{product.price}} €</h4>
           </div>
         </div>
       </div>
+
     </div>
+    <div class="has-pagination u-list-control">
+      <ul class="responsive-style1 u-pagination u-unstyled u-block-b1b6-127">
+        <li class="disabled prev u-nav-item u-pagination-item">
+          <a class="u-button-style u-nav-link" [routerLink]="['/previous-page']" style="padding: 16px">〈</a>
+        </li>
+        <li *ngFor="let page of pages" [class.active]="page === currentPage" class="u-nav-item u-pagination-item">
+          <a class="u-button-style u-nav-link" [routerLink]="['/page', page]" style="padding: 16px">{{ page }}</a>
+        </li>
+        <li class="next u-nav-item u-pagination-item">
+          <a class="u-button-style u-nav-link" [routerLink]="['/next-page']" style="padding: 16px">〉</a>
+        </li>
+      </ul>
+    </div>
+
   </div>
-</div>
+</section>
+</body>
