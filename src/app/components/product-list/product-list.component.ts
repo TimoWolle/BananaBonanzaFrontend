@@ -30,20 +30,6 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
     this.getProducts();
-
-    let product: Product = {
-      id: 1,
-      title: 'Product Title',
-      description: 'Product Description',
-      imageURL: 'path/to/image.jpg',
-      price: 99.99,
-      oldPrice: 199.99,
-      category: ProductCategory.ACCESSORIES,
-      reviews: [],
-      status: ProductStatus.AVAILABLE
-    };
-
-    this.products = [product]; // Hier setzen wir das erstellte Produkt in das products-Array
   }
   onSelectProduct(product: Product) {
     // Hier können Sie bestimmen, was passiert, wenn ein Produkt ausgewählt wird.
