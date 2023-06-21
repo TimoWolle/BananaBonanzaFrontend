@@ -11,67 +11,48 @@
           </colgroup>
           <thead class="u-table-header u-block-c85c-13">
           <tr>
-            <th class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-14">Product </th>
-            <th class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-15">Price </th>
-            <th class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-16">Quantity </th>
-            <th class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-17">Subtotal </th>
+            <th class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-14">Produkt </th>
+            <th class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-15">Preis </th>
+            <th class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-16">Anzahl </th>
+            <th class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-17">Total </th>
           </tr>
           </thead>
-          <tbody class="u-table-body u-block-c85c-18">
-          <tr>
-            <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-19"><span class="u-cart-remove-item u-icon u-block-c85c-20">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" style="width: 1em; height: 1em;">
-                <g>
-                  <path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26
-		S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z">
-
-                  </path>
-                  <path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0
-		s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36
-		s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293
-		c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z">
-
-                  </path>
-                </g>
-              </svg>
-            </span>
-              <img class="u-cart-product-image u-image u-image-default u-product-control u-block-c85c-21" data-state="{&quot;height&quot;:{&quot;expandedBlock&quot;:{&quot;XL&quot;:false,&quot;LG&quot;:false,&quot;MD&quot;:false,&quot;SM&quot;:false,&quot;XS&quot;:false},&quot;expandedParent&quot;:{&quot;XL&quot;:null,&quot;LG&quot;:null,&quot;MD&quot;:null,&quot;SM&quot;:null,&quot;XS&quot;:null}}}" src="data:image/svg+xml;base64,DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9Im1hbiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSIyNTZweCIgaGVpZ2h0PSIyNTZweCIgdmlld0JveD0iMCAwIDI1NiAyNTYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI1NiAyNTYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHJlY3QgZmlsbD0iI0M2RDhFMSIgd2lkdGg9IjI1NiIgaGVpZ2h0PSIyNTYiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjN0Y5NkE2IiBkPSJNMTkyLjcsNTRjMCwwLDUuMywwLjMsMTMuMiw5LjJjNy45LDguOSwxNC4zLDE5LDE1LjgsMjUuOA0KCWMxLjUsNi44LDIsMTMuNiwwLjMsMTcuNWMtMS44LDMuOS0xMS40LDM0LjQtMTEuNyw0My45Yy0wLjMsOS41LTIuNiw1My0yLjYsNTNoLTEwLjVsLTIuMS01Ny43YzAsMC0wLjMtMTAuNy0zLjgtMTAuNw0KCWMtMy41LDAtMTYuNyw0LjQtMjguOSwyN0MxNTAsMTg0LjUsMTQzLDE5Ny41LDEzNiwyMDAuOGMtNywzLjMtNTcuMyw0LjItNzEsMi4xYy0xMy43LTIuMS0zMS4zLTkuNS0zMS4zLTkuNXMtMy44LTcuMSw3LTEwLjENCgljMTAuOC0zLDQxLjgtMTMsNDguMi0xNi45YzMuNy0yLjIsMjksNi45LDM4LjktNS4xYzkuMS0xMS4xLDM3LjMtNzEsNDUuNi04Mi45QzE4My40LDY0LjEsMTkwLjgsNTQsMTkyLjcsNTR6Ii8+DQo8L3N2Zz4NCg==">
+          <tbody class="u-table-body u-block-c85c-18" *ngIf="shoppingCarts.length > 0">
+          <tr *ngFor="let cartItem of shoppingCarts">
+            <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-19">
+      <span class="u-cart-remove-item u-icon u-block-c85c-20" (click)="removeProductFromCart(cartItem.product)">
+        <!-- SVG entfernt für Kürze -->
+      </span>
+              <img class="u-cart-product-image u-image u-image-default u-product-control u-block-c85c-21" [src]="cartItem.product.imageURL">
               <h2 class="u-cart-product-title u-product-control u-text u-block-c85c-22">
-                <a class="u-product-title-link" href="#">Product 1 Title</a>
+                <a class="u-product-title-link" routerLink="/product/{{cartItem.product.id}}">{{ cartItem.product.title }}</a>
               </h2>
             </td>
             <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-23">
               <div class="u-cart-product-price u-product-control u-product-price u-block-c85c-24">
                 <div class="u-price-wrapper">
-                  <div class="u-hide-price u-old-price"></div>
-                  <div class="u-price">$17.00</div>
+                  <div class="u-price">{{ cartItem.product.price | currency: 'EUR' }}</div>
                 </div>
               </div>
             </td>
             <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-25">
               <div class="u-cart-product-quantity u-product-control u-product-quantity u-block-c85c-26">
-                <div class="u-hidden u-quantity-label"> Quantity </div>
                 <div class="u-border-1 u-border-grey-25 u-quantity-input">
-                  <a class="disabled minus u-button-style u-hidden u-quantity-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
-                  </a>
-                  <input class="u-border-grey-30 u-input u-block-c85c-27" type="text" value="1" pattern="[0-9]+">
-                  <a class="plus u-button-style u-hidden u-quantity-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
-                  </a>
+                  <input class="u-border-grey-30 u-input u-block-c85c-27" [(ngModel)]="cartItem.quantity" type="text" pattern="[0-9]+" (change)="updateProductQuantity(cartItem.product, cartItem.quantity)">
+
                 </div>
               </div>
             </td>
             <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-28">
               <div class="u-cart-product-subtotal u-product-control u-product-price u-block-c85c-29">
                 <div class="u-price-wrapper">
-                  <div class="u-hide-price u-old-price"></div>
-                  <div class="u-price" style="font-weight: 700;">$17.00</div>
+                  <div class="u-price" style="font-weight: 700;">{{ cartItem.product.price * cartItem.quantity | currency: 'EUR' }}</div>
                 </div>
               </div>
             </td>
           </tr>
           </tbody>
+
           <tfoot class="hidden u-table-footer u-block-c85c-52">
           <tr class="hidden u-block-c85c-53">
             <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-54"></td>
@@ -85,12 +66,12 @@
       <div class="u-cart-button-container">
         <a href="#" class="u-active-none u-btn u-button-style u-cart-continue-shopping u-hover-none u-none u-text-body-color u-block-c85c-58"><span class="u-icon u-block-c85c-59"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 443.52 443.52" x="0px" y="0px" style="width: 1em; height: 1em;"><g><g><path d="M143.492,221.863L336.226,29.129c6.663-6.664,6.663-17.468,0-24.132c-6.665-6.662-17.468-6.662-24.132,0l-204.8,204.8    c-6.662,6.664-6.662,17.468,0,24.132l204.8,204.8c6.78,6.548,17.584,6.36,24.132-0.42c6.387-6.614,6.387-17.099,0-23.712    L143.492,221.863z"></path>
 </g>
-</g></svg></span>&nbsp;Continue Shopping
+</g></svg></span>&nbsp;Weiter einkaufen
         </a>
-        <a href="#" class="u-btn u-button-style u-cart-update u-grey-5 u-block-c85c-60">Update Cart</a>
+        <a href="#" class="u-btn u-button-style u-cart-update u-grey-5 u-block-c85c-60">Update Warenkorb</a>
       </div>
       <div class="u-cart-blocks-container">
-        <div class="u-cart-block u-indent-30">
+        <div class="u-cart-block u-indent-30" style="opacity: 0; pointer-events: none">
           <div class="u-cart-block-container u-clearfix">
             <h5 class="u-cart-block-header u-text u-block-c85c-61">Promotion Code</h5>
             <div class="u-cart-block-content u-text u-block-c85c-62">
@@ -126,27 +107,17 @@
                   </thead>
                   <tbody class="u-align-right u-table-body u-block-c85c-80">
                   <tr>
-                    <td class="u-align-left u-border-1 u-border-grey-dark-1 u-first-column u-table-cell u-block-c85c-81">Vor-Steuern</td>
-                    <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-82">{{ preTax }}€</td>
-                  </tr>
-                  <tr>
                     <td class="u-align-left u-border-1 u-border-grey-dark-1 u-first-column u-table-cell u-block-c85c-81">MWST. 19%</td>
-                    <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-82">{{ tax }}€</td>
+                    <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-82">{{ calculateTax() | currency: 'EUR' }}</td>
                   </tr>
                   <tr>
                     <td class="u-align-left u-border-1 u-border-grey-dark-1 u-first-column u-table-cell u-block-c85c-83">Total</td>
-                    <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-84">{{ total }}€</td>
+                    <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-84">{{ calculateTotal() | currency: 'EUR' }}</td>
                   </tr>
                   </tbody>
-                  <tfoot class="hidden u-table-footer u-block-c85c-85">
-                  <tr class="hidden u-block-c85c-86">
-                    <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-87"></td>
-                    <td class="u-border-1 u-border-grey-dark-1 u-table-cell u-block-c85c-88"></td>
-                  </tr>
-                  </tfoot>
                 </table>
               </div>
-              <a href="#" class="u-btn u-button-style u-cart-checkout-btn u-block-c85c-89">Proceed to Checkout</a>
+              <a href="#" class="u-btn u-button-style u-cart-checkout-btn u-block-c85c-89" style="margin-bottom: 10px; margin-top: 10px">Proceed to Checkout</a>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -16,6 +16,8 @@ import { KontaktComponent } from './components/kontakt/kontakt.component';
 import { IndexComponent } from './components/index/index.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { CartComponent } from './components/cart/cart.component';
+import {CommonModule, registerLocaleData} from "@angular/common";
+import localeDe from '@angular/common/locales/de';
 
 @NgModule({
   declarations: [
@@ -34,12 +36,18 @@ import { CartComponent } from './components/cart/cart.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+  provide: LOCALE_ID,
+  useValue: 'de-DE' // 'de-DE' for Germany, 'fr-FR' for France ...
+},],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {constructor() {
+  registerLocaleData(localeDe);
+}}

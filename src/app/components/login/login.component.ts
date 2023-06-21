@@ -35,11 +35,7 @@ export class LoginComponent implements OnInit {
       data => {
         // handle successful login here
         // for example redirect the user to home page
-        this.router.navigate(['/']);
-      },
-      error => {
-        // handle error here
-        console.log(error);
+        this.router.navigate(['/shop']);
       }
     );
   }
