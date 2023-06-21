@@ -5,6 +5,7 @@ import {Product} from "../entity/product";
 import {UserShoppingCartItem} from "../entity/UserShoppingCartItem";
 import {User} from "../entity/user";
 import {Shoppingcart} from "../entity/shoppingcart";
+import {HttpService} from "./http.service";
 
 
 @Injectable({
@@ -13,16 +14,17 @@ import {Shoppingcart} from "../entity/shoppingcart";
 export class CartService {
   private apiUrl = 'http://localhost:8080/api/user/shopping-cart/update';  // URL to your backend
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private httpService: HttpService) { }
 
 
   getShoppingCartByUserId(id: number) {
     const url = `http://localhost:8080/api/user/${id}/cart`;
-    const headers = this.createHeaders();
+    const headers = this.httpService.createHeaders();
     return this.http.get<Shoppingcart[]>(url, { headers });
   }
+
   updateShoppingCart(item: UserShoppingCartItem): Observable<any> {
-    const headers = this.createHeaders();
+    const headers = this.httpService.createHeaders();
     return this.http.put<any>(this.apiUrl, item, { headers });
   }
 
@@ -38,13 +40,4 @@ export class CartService {
     return this.updateShoppingCart({ action: 'update', product, quantity });
   }
 
-  private createHeaders() {
-    const username = 'admin';
-    const password = 'admin';
-
-    return new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: 'Basic ' + btoa(username + ':' + password)
-    });
-  }
 }

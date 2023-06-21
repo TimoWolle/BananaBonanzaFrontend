@@ -29,8 +29,8 @@ export class CartComponent implements OnInit {
     );
   }
 
-  async removeProductFromCart(product: Product): Promise<void> {
-    await this.cartService.removeProduct(product).subscribe();
+  removeProductFromCart(product: Product){
+    this.cartService.removeProduct(product).subscribe();
     this.loadShoppingCart();
   }
 
@@ -50,9 +50,10 @@ export class CartComponent implements OnInit {
   }
 
   updateProductQuantity(product: Product, quantity: number) {
-    const userId = 1; // Annahme: ID des eingeloggten Benutzers
+    this.cartService.updateProductQuantity(product, quantity).subscribe(
+      (shoppingCarts: Shoppingcart[]) => {
+      this.shoppingCarts = shoppingCarts;}
+    )
 
-    this.cartService.updateProductQuantity(product, quantity).subscribe()
-    this.loadShoppingCart();
   }
 }

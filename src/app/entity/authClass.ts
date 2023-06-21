@@ -1,3 +1,16 @@
+export class LoginInformations {
+  email: string;
+  password: string;
+  isLoggedIn: boolean;
+
+  constructor(email: string, password: string, isLoggedIn: boolean) {
+    this.email = email;
+    this.password = password;
+    this.isLoggedIn = isLoggedIn;
+  }
+}
+
+
 export class LoginRequest {
   email: string;
   password: string;
